@@ -1,4 +1,4 @@
-# Entrega1-Nunez
+# Entrega Intermedia del Proyecto Final
 🗂️ Entrega Intermedia del Proyecto Final  Curso Python en CoderHouse
 
 Modelamos una app que nos cuestiona.
