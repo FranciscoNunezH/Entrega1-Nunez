@@ -1,0 +1,27 @@
+{% extends 'bookapp/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    <h1 class="mb-5"> Resultados de la Busqueda</h1>
+{% endblock %}
+
+{% block contenido  %}
+    <h1> Busqueda de Libros </h1>
+
+    {% if libros %}
+
+    <ul>
+        {% for libro in libros  %}
+        <li>Nombre: {{ libro.book_name }}</li>
+        <li> Review: {{ libro.book_review }} </li>
+        <li> Paginas: {{ libro.book_pages }} </li>
+        <br>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p> No se encontraron libros. </p>
+
+    {% endif %}
+
+{% endblock %}

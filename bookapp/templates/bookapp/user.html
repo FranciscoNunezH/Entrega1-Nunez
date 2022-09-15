@@ -1,0 +1,18 @@
+{% extends 'bookapp/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    <h1 class="mb-5"> Vista Usuarios</h1>
+{% endblock %}
+
+{% block contenido  %}
+    <form action="{% url 'user' %}" method="POST"> {% csrf_token %} 
+        
+        <table>
+            {{ formulario.as_table}}
+        </table>
+
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'bookapp/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    <h1 class="mb-5"> Vista Formulario Alta</h1>
+{% endblock %}
+
+{% block contenido  %}
+    <form action="{% url 'libros_formulario' %}" method="POST"> {% csrf_token %} 
+        
+        <table>
+            {{ formulario.as_table}}
+        </table>
+
+        <input type="submit" value="Enviar">
+    </form>
+    
+{% endblock %}
